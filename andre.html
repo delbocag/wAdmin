@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Andre Cosimi — Consultoría Psicológica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #fff9fb;
+      --card: #fff;
+      --rosa-1: #f8e7ec;
+      --rosa-2: #f4cbd6;
+      --rosa-3: #eaa3b7;
+      --text: #3a2f33;
+      --muted: #6b5a63;
+      --accent: #d05d7a;
+      --radius: 14px;
+      --container: 1000px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: 'Libre Franklin', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg),#fff);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .wrap{max-width:var(--container);margin:36px auto;padding:24px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:68px;height:68px;border-radius:12px;background:var(--rosa-1);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    .brand h1{margin:0;font-size:20px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:10px;text-decoration:none;font-size:14px;color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;margin-top:8px}
+    .hero-card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 6px 22px rgba(46,34,39,0.06);border:1px solid rgba(218,190,196,0.5)}
+    .hero-image{width:100%;height:320px;border-radius:12px;object-fit:cover;background:linear-gradient(135deg,var(--rosa-1),var(--rosa-2));display:block}
+
+    .intro h2{margin:0 0 8px 0;font-size:22px}
+    .intro p{color:var(--muted);margin:0 0 14px 0}
+    .buttons{display:flex;gap:10px;margin-top:8px}
+    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:0;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+    .service{background:var(--rosa-1);padding:14px;border-radius:12px}
+    .service h3{margin:0 0 6px 0}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+
+    .two-col{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(46,34,39,0.04);border:1px solid rgba(232,208,214,0.6)}
+
+    .testimonials blockquote{margin:0;padding:12px;border-left:4px solid var(--rosa-3);color:var(--muted)}
+
+    .contact .contact-row{display:flex;gap:12px;align-items:center}
+    .contact .phone{font-weight:700}
+    .contact .wa{display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:10px 12px;border-radius:10px;border:1px solid rgba(34,22,28,0.06)}
+
+    footer{margin-top:24px;padding:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .two-col{grid-template-columns:1fr;}
+      .services{grid-template-columns:1fr;}
+      header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AC</div>
+        <div>
+          <h1>Andre Cosimi</h1>
+          <p>Consultora psicológica — Trabajo con familias · Sexología · Acompañamiento individual</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre">Sobre Andre</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <!-- Reemplazar src por la foto real de Andre -->
+        <img class="hero-image" src="/images/andre-placeholder.jpg" alt="Andre Cosimi — Consultora psicológica (foto de ejemplo)">
+      </div>
+
+      <div class="hero-card intro">
+        <h2>Bienvenida</h2>
+        <p>Hola — Soy Andre Cosimi. Acompaño a personas y familias en procesos de mejora de la comunicación, resolución de conflictos y en temas relacionados con la sexualidad humana. Trabajo con un enfoque cálido, respetuoso y profesional.</p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#contacto">Solicitar turno</a>
+          <a class="btn btn-ghost" href="#sobre">Conocer más</a>
+        </div>
+
+        <hr style="margin:16px 0;border:none;border-top:1px solid rgba(234,163,183,0.4)"/>
+
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="flex:1">
+            <strong>Especialidades</strong>
+            <ul style="margin:6px 0 0 16px;color:var(--muted)">
+              <li>Trabajo con familias</li>
+              <li>Sexología clínica</li>
+              <li>Acompañamiento individual (adultos)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="services">
+      <div class="service card">
+        <h3>Consultas Familiares</h3>
+        <p>Intervenciones centradas en mejorar la comunicación, resolver conflictos y fortalecer vínculos familiares.</p>
+      </div>
+      <div class="service card">
+        <h3>Sexología</h3>
+        <p>Atención en sexualidad, disfunciones, orientación y acompañamiento a parejas y personas.</p>
+      </div>
+      <div class="service card">
+        <h3>Acompañamiento Individual</h3>
+        <p>Procesos terapéuticos de corta y mediana duración, con herramientas prácticas para el día a día.</p>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <div class="card" id="sobre">
+        <h3>Sobre Andre</h3>
+        <p>Andre Cosimi es consultora psicológica con amplia experiencia en trabajo con familias y temas de sexología. Su enfoque combina escucha activa, técnicas psicológicas contemporáneas y un acompañamiento cálido y respetuoso. (Aquí podés reemplazar este texto por la biografía completa de Andre).</p>
+
+        <h4 style="margin-top:12px">Método de trabajo</h4>
+        <p style="color:var(--muted)">Atención presencial y encuentros online. Sesiones de 45-50 minutos. Evaluación inicial y plan de trabajo personalizado.</p>
+      </div>
+
+      <aside class="card contact" id="contacto">
+        <h3>Contacto</h3>
+        <p class="contact-row"><span class="phone">Tel: <span id="telefono">(011) 15-XXXX-XXXX</span></span></p>
+        <p style="margin:8px 0"><a id="whatsapp" class="wa" href="https://wa.me/549XXXXXXXXXX" target="_blank">Abrir chat por WhatsApp</a></p>
+
+        <h4>Solicitar turno</h4>
+        <p style="color:var(--muted)">Completá los datos y Andre te responderá para coordinar el encuentro.</p>
+        <form onsubmit="event.preventDefault();alert('Gracias — formulario de ejemplo. Reemplazar por integración real.');">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <input placeholder="Nombre" required style="padding:10px;border-radius:10px;border:1px solid rgba(34,22,28,0.06)">
+            <input placeholder="Teléfono o WhatsApp" required style="padding:10px;border-radius:10px;border:1px solid rgba(34,22,28,0.06)">
+            <textarea placeholder="Mensaje / Motivo" rows="3" style="padding:10px;border-radius:10px;border:1px solid rgba(34,22,28,0.06)"></textarea>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+        </form>
+
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(234,163,183,0.2)"/>
+        <p style="font-size:13px;color:var(--muted)">Dirección: CABA, Buenos Aires (a confirmar). Atención presencial y online.</p>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top:18px">
+      <h3>Testimonios</h3>
+      <div class="testimonials" style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+        <blockquote>"Andre nos ayudó a reencontrarnos como familia. Su acompañamiento fue cálido y profesional." — Familia P.</blockquote>
+        <blockquote>"Gracias a Andre logré mejorar mi relación de pareja y mi bienestar personal." — M.</blockquote>
+        <p style="margin-top:8px;color:var(--muted);font-size:13px">(Si querés, podés reemplazar estos testimonios por testimonios reales con autorización).</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <!-- Año dinámico para que siempre esté actualizado --> <span id="anio"></span> — Andre Cosimi. Consultoría psicológica. Buenos Aires.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Valores de ejemplo: reemplazar por datos reales
+    document.getElementById('anio').textContent = new Date().getFullYear();
+    // Cambiar teléfono y link de WhatsApp aquí
+    const telefono = '(011) 15-1234-5678';
+    const waNumber = '54911512345678'; // formato internacional sin signos
+    document.getElementById('telefono').textContent = telefono;
+    document.getElementById('whatsapp').href = `https://wa.me/${waNumber}`;
+  </script>
+</body>
+</html>
